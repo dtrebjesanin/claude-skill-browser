@@ -1,0 +1,13 @@
+.git/**
+test/**
+src/**/*.ts
+vite.config.ts
+tsconfig.json
+docs/**
+assets/icon.svg
+desktop.ini
+**/*.map
+.superpowers/**
+.claude/**
+.vscode/**
+**/*.d.ts

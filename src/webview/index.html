@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'none'; style-src {{cspSource}} 'unsafe-inline'; script-src 'nonce-{{nonce}}';">
+  <link rel="stylesheet" href="{{styleUri}}">
+</head>
+<body>
+  <div class="search-container">
+    <div class="search-wrapper">
+      <span class="search-prefix">/</span>
+      <input type="text" id="search" placeholder="filter skills..." />
+    </div>
+  </div>
+  <div id="skills-container"></div>
+  <div id="preview-pane" style="display:none;"></div>
+  <div id="context-menu" class="context-menu" style="display:none;"></div>
+  <script nonce="{{nonce}}" src="{{scriptUri}}"></script>
+</body>
+</html>

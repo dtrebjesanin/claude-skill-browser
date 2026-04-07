@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build output
+out/
+*.vsix
+
+# Environment & secrets
+.env
+.env.*
+
+# OS files
+desktop.ini
+.DS_Store
+Thumbs.db
+
+# IDE & tooling
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Generated files
+**/*.map
+**/*.d.ts
+
+# Local config
+.superpowers/
+.claude/
+
+# Internal docs
+docs/

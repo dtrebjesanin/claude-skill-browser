@@ -1,0 +1,85 @@
+{
+  "name": "claude-skill-browser",
+  "displayName": "Claude Skill Browser",
+  "description": "Browse and copy Claude Code skill commands from a sidebar grid",
+  "version": "0.1.0",
+  "publisher": "DaniloTrebjesanin",
+  "author": "Danilo Trebjesanin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dtrebjesanin/claude-skill-browser.git"
+  },
+  "icon": "assets/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "claude-skill-browser",
+          "title": "Claude Skills",
+          "icon": "assets/sidebar-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "claude-skill-browser": [
+        {
+          "type": "webview",
+          "id": "claudeSkillBrowser.sidebar",
+          "name": "Skills"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "claudeSkillBrowser.refresh",
+        "title": "Refresh Skills",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "claudeSkillBrowser.refresh",
+          "when": "view == claudeSkillBrowser.sidebar",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Claude Skill Browser",
+      "properties": {
+        "claudeSkillBrowser.additionalDirectories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "Additional directories to scan for SKILL.md files"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "package": "npx @vscode/vsce package",
+    "publish": "npx @vscode/vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.2",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0",
+    "vitest": "^3.0.0"
+  }
+}
