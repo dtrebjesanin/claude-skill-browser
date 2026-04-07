@@ -16,10 +16,10 @@ export function parseFrontmatter(content: string): FrontmatterResult | null {
   const name = extractField(yaml, 'name');
   const description = extractField(yaml, 'description');
 
-  if (!name || !description) return null;
+  if (!name) return null;
 
   const category = extractField(yaml, 'category');
-  const result: FrontmatterResult = { name, description };
+  const result: FrontmatterResult = { name, description: description || 'No description' };
   if (category) result.category = category;
   return result;
 }
