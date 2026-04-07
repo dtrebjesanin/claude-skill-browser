@@ -2,7 +2,7 @@
   "name": "claude-skill-browser",
   "displayName": "Claude Skill Browser",
   "description": "Browse and copy Claude Code skill commands from a sidebar grid",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "DaniloTrebjesanin",
   "author": "Danilo Trebjesanin",
   "license": "MIT",
